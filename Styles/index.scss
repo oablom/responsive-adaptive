@@ -1,0 +1,259 @@
+@import 'fonts';
+
+html, body {
+    background: black;
+    width: 100%;
+    height: 100%;
+}
+
+
+    .mainsection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+        .mainsection-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 80%;
+            max-width: 100%;
+            justify-content: space-between;
+            height: 100%;   
+        }
+
+            .top {
+                display: flex;
+                flex-direction: column;
+                height: 50%;
+                max-height: 100%; 
+                max-width: 100%;
+                justify-content: space-between;
+                
+            }
+            
+
+                .navbar, .navbar-landscape {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                }
+
+                    .navbar-head {
+                        width: 30%;
+
+                        h2 {
+                            @include navbarh2('Baloo 2');
+                        }
+                    }
+
+                    .navbar-links {
+                        width: 56%;
+                        max-width: 300px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        
+                        @include navbar;
+
+                        img {
+                            visibility: hidden;
+                        }
+                            
+                        a {
+                            text-decoration: none;
+                            :hover {
+                                color: black;
+                            }
+
+                        }
+                    }
+                
+                .musician {
+                    align-self: center;
+                    width: 95%;
+                    text-align: center;
+                    margin-bottom: 4%;
+
+                    h1, p {
+                        margin: 0px 0px 4%;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                    h1 {
+                        @include h1standard
+                    }
+
+                    p {
+                        @include pstandard
+                    }
+                }
+                    
+
+            .bot-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+            }
+                .bot {
+                    display: flex;
+                    justify-content: center;
+                    width: 342px;
+                    height: 405px;
+                    max-width: 100%;
+                    max-height: 100%;   
+                    margin-bottom: 10%;
+                    
+                }
+                    
+
+@media (max-width: 460px), (max-height: 520px){
+
+    .top {
+        transform: translateY(-10%)
+    }
+
+        .navbar {
+            img {
+                visibility: visible;
+            }
+
+            a {
+                visibility: hidden;
+            }
+        }
+
+        .musician {
+            width: 80%;
+            h1 {
+                @include h1phone;
+            }
+        
+            p {
+                @include pphone;
+            }    
+        }
+
+    .bot {
+        display: flex;
+        justify-content: center;
+        width: 180px;
+        height: 220px;
+        max-width: 100%;
+        max-height: 100%;   
+        margin-bottom: 10%;
+    }
+
+    
+
+}        
+
+
+@media (max-width: 1300px){
+    .navbar-landscape1 {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1300px) and (orientation: landscape) {
+
+          .mainsection-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 80%;
+            max-width: 100%;
+            justify-content: space-between;
+            height: 100%;   
+        }
+
+    .mainsection-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+        width: 80%;
+        max-width: 100%;
+        justify-content: space-between;
+        height: 100%;   
+
+            h2 {
+                @include navbarh2('Actor');
+                font-weight: normal;
+            }
+    }
+
+        .top {
+            position: relative;
+            display: flex;
+            width: 40%;
+            height: 810px;
+            max-height: 100%;
+            justify-content: center;
+        }
+
+            .navbar {
+                display: none;
+            }
+
+            .navbar-landscape1 {
+                position: absolute;
+                height: 100%;
+                width: 30%;
+                margin: 0px;
+
+                .navbar-landscape {
+                    height: 200px;
+                }
+            }
+
+                .navbar-links {
+                    max-width: 270px;
+                    padding-right: 0px;
+                }
+            
+            .musician {
+                align-self: flex-start;
+                width: 95%;
+                margin-bottom: 4%;
+
+                h1 {
+                    transform: translateY(-20px);
+                    @include h1landscape
+                }
+
+                p {
+                    @include plandscape
+                }
+
+                h1, p {
+                    text-align: left;
+                }
+            }
+
+            .arrow {
+                position: absolute;
+                height: 100%;
+                width: 400px;
+                display: flex;
+                align-items: flex-end;
+                
+            }
+
+        .bot-container {
+            height: 690px;
+            width: 585px;
+        }
+
+
+            .img {
+                height: 690px;
+                width: 585px;
+                }
+}

@@ -1,0 +1,85 @@
+h1, h2, p {
+    color: white;
+}
+// font-family: 'Actor', sans-serif;
+// font-family: 'Baloo 2', cursive;
+
+@mixin navbarh2 ($fontfamily) {
+    font-family: $fontfamily;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+}
+
+@mixin navbar {
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0px;
+text-align: left;
+}
+
+// standard
+@mixin h1standard {
+font-family: 'Poppins', sans-serif;
+font-size: 72px;
+font-style: normal;
+font-weight: 500;
+line-height: 83px;
+letter-spacing: -1.6px;
+}
+
+@mixin pstandard {
+    font-family: Source Sans Pro;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+// standard
+
+// landscape
+@mixin h1landscape {
+    font-family: Poppins;
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 102px;
+    letter-spacing: -2px;
+}
+
+@mixin plandscape {
+    font-family: Source Sans Pro;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0px;    
+}
+// landscape
+
+// phone
+@mixin h1phone {
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: -0.8px;
+}
+
+@mixin pphone {
+    font-family: Source Sans Pro;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+}
+// phone

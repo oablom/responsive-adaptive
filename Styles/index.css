@@ -106,6 +106,15 @@ html, body {
   text-align: center;
 }
 
+.arrow {
+  position: absolute;
+  height: 100%;
+  width: 400px;
+  display: flex;
+  align-items: flex-end;
+  visibility: hidden;
+}
+
 .bot-container {
   width: 100%;
   display: flex;
@@ -260,6 +269,7 @@ html, body {
     width: 400px;
     display: flex;
     align-items: flex-end;
+    visibility: visible;
   }
 
   .bot-container {

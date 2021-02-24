@@ -93,6 +93,13 @@ html, body {
                     }
                 }
                     
+                .arrow {
+                    position: absolute;
+                    height: 100%;
+                    width: 400px;
+                    display: flex;
+                    align-items: flex-end;
+                    visibility: hidden;}
 
             .bot-container {
                 width: 100%;
@@ -243,6 +250,7 @@ html, body {
                 width: 400px;
                 display: flex;
                 align-items: flex-end;
+                visibility: visible;
                 
             }
 
